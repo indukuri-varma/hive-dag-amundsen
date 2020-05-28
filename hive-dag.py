@@ -41,7 +41,7 @@ default_args = {
 }
 
 # NEO4J cluster endpoints
-NEO4J_ENDPOINT = 'bolt://localhost:7687'
+NEO4J_ENDPOINT = 'bolt://52.254.53.203:7687'
 
 neo4j_endpoint = NEO4J_ENDPOINT
 
@@ -57,7 +57,7 @@ SUPPORTED_HIVE_SCHEMA_SQL_IN_CLAUSE = "('{schemas}')".format(schemas="', '".join
 
 # Todo: user needs to modify and provide a hivemetastore connection string
 def connection_string():
-    return 'hivemetastore.connection'
+    return 'jdbc:sqlserver://marsanalyticsdevsqlsrv.database.windows.net:1433;database=marsanalyticshivesqldb;trustServerCertificate=true;username="hiveadmin";password="32E4UHkFyB5W25JP!"'
 
 
 def create_table_wm_job(**kwargs):
