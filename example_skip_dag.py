@@ -42,7 +42,6 @@ class DummySkipOperator(DummyOperator):
 def create_test_pipeline(suffix, trigger_rule, dag_):
     """
     Instantiate a number of operators for the given DAG.
-
     :param str suffix: Suffix to append to the operator task_ids
     :param str trigger_rule: TriggerRule for the join task
     :param DAG dag_: The DAG to run the operators on
