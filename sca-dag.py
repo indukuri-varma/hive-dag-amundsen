@@ -28,10 +28,7 @@ dag = DAG(
 cluster_spec = {
     'spark_version': '6.0.x-scala2.11',
     'node_type_id': 'Standard_DS3_v2',
-    'aws_attributes': {
-        'availability': 'ON_DEMAND'
-    },
-    'num_workers': 4
+    'num_workers': 2
 }
 
 notebook_task_params = {
