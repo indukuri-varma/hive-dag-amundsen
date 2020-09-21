@@ -13,8 +13,8 @@ dag = DAG(
     schedule_interval=timedelta(days=1),
     default_args=dict(
         email=['indukuri.varma@effem.com'],
-        email_on_failure=True,
-        email_on_success=True,
+        email_on_failure=False,
+        email_on_success=False,
         email_on_retry=False,
         retries=1,
         retry_delay=timedelta(minutes=5)
@@ -27,7 +27,7 @@ dag = DAG(
 
 cluster_spec = {
     'spark_version': '6.0.x-scala2.11',
-    'node_type_id': 'i3.xlarge',
+    'node_type_id': 'Standard_DS3_v2',
     'aws_attributes': {
         'availability': 'ON_DEMAND'
     },
